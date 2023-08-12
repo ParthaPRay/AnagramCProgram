@@ -24,7 +24,13 @@ void generate_anagrams(char *str, int l, int r) {
 int main() {
     char str[100];  // Assuming the maximum length of input string is 100
     printf("Enter the string: ");
-    scanf("%s", str);
+    fgets(str, sizeof(str), stdin);
+    
+    // Remove the newline character added by fgets at the end of the string
+    size_t len = strlen(str);
+    if (len > 0 && str[len-1] == '\n') {
+        str[len-1] = '\0';
+    }
     
     clock_t start, end;
     double cpu_time_used;
