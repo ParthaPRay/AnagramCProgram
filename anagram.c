@@ -1,3 +1,5 @@
+// The code is curated by Partha Pratim Ray as on 12/08/2023
+
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
